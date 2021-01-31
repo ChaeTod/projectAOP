@@ -9,15 +9,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyDemoLoggingAspect {
 
-    @Pointcut("execution(* springdemo.AOP.DAO.*.*(..))") // declaring a pointcut declaration
+    @Pointcut("execution(* springdemo.AOPCombo.DAO.*.*(..))") // declaring a pointcut declaration
     private void forDaoPackage() {}
 
     // create point cut for getter method
-    @Pointcut("execution(* springdemo.AOP.DAO.*.get*(..))")  // match getter methods
+    @Pointcut("execution(* springdemo.AOPCombo.DAO.*.get*(..))")  // match getter methods
     private void getter() {}  // name of pointcut declaration (can have any name)
 
     // create pointcut for setter method
-    @Pointcut("execution(* springdemo.AOP.DAO.*.set*(..))") // match setter methods
+    @Pointcut("execution(* springdemo.AOPCombo.DAO.*.set*(..))") // match setter methods
     private void setter() {}
 
     // create point: include package ... exclude getter/setter

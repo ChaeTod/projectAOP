@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Order(2)
 public class MyDemoLoggingAspect {
 
+    // need fully qualified class name: package + class
     @Before("springdemo.AOPOrders.Aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()") // apply pointcut declaration to advice
     public void beforeAddAccountAdvice(){
         System.out.println("\n ===> Executing @Before advice on method");
